@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- GSAP and ScrollTrigger.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lenis.js -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script> 
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      *::selection {
+        background: #000;
+        color: #fff;
+        border-radius: .5rem;
+      }
+    </style>
+</head>
+<body>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+    
+    <script>
+        // Tailwind CSS configuration
+        const tailwindConfig = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily: {
+                bebas: ['Bebas Neue', 'sans-serif'],
+            },
+            }
+          }
+        };
+        
+        // Apply Tailwind CSS
+        tailwind.apply(tailwindConfig);
+
+        // Lenis.js initialization
+        const lenis = new Lenis();
+
+        // Lenis.js event listener example
+        lenis.on('scroll', (e) => {
+          console.log(e);
+        });
+
+        // GSAP and ScrollTrigger.js initialization
+        const gsap = window.gsap;
+        const ScrollTrigger = window.ScrollTrigger;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
+</body>
+</html>
