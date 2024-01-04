@@ -6,34 +6,32 @@ This is a Learning Management System (LMS) web application built using Django, T
 
 ## Project Structure
 
-```
 lms_project/
 ├── lms_app/
-│   ├── migrations/
-│   ├── static/
-│   │   └── css/
-│   │   └── js/
-│   ├── templates/
-│   │   └── lms_app/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── tests.py
-│   └── views.py
+│ ├── migrations/
+│ ├── static/
+│ │ └── css/
+│ │ └── js/
+│ ├── templates/
+│ │ └── lms_app/
+│ ├── init.py
+│ ├── admin.py
+│ ├── apps.py
+│ ├── models.py
+│ ├── tests.py
+│ └── views.py
 ├── lms_project/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
+│ ├── init.py
+│ ├── asgi.py
+│ ├── settings.py
+│ ├── urls.py
+│ └── wsgi.py
 ├── static/
-│   ├── css/
-│   └── js/
+│ ├── css/
+│ └── js/
 ├── templates/
-│   └── base.html
+│ └── base.html
 ├── manage.py
-```
 
 ## Technologies Used
 
