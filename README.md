@@ -1,4 +1,3 @@
-Certainly! Below is a template for a README.md file that you can use on your GitHub repository. It provides explanations for the Django project structure, the usage of Tailwind CSS, and the models and views for your LMS project.
 
 ```markdown
 # Learning Management System (LMS) Web App
