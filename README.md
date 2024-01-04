@@ -1,5 +1,4 @@
 
-```markdown
 # Learning Management System (LMS) Web App
 
 This is a Learning Management System (LMS) web application built using Django, Tailwind CSS, Lenis.js, GSAP, and ScrollTrigger.js. The app uses an SQLite database to store data.
